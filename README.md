@@ -19,26 +19,22 @@ Cформулируйте гипотезы и вопросы, которые п�
 1. В функции logArrayInfo вместо перебора через forEach пробежаться через цикл for of   
  ``` 
   async function logArrayInfo(array) {
-
     for (const item of array) {
         await logWithDelay(item);
     }
-
-
     console.log('Done!');
-
 }
 ```
 - Можно исправить через map и указать в метод Promise all 
 ```
-
 async function logArrayInfo(array) {
     const promises = array.map(async (item) => {
         await logWithDelay(item);
     });
     await Promise.all(promises);
     console.log('Done!');
-}```
+}
+```
 
 2. Данный код создаст массив из котиков. Каждая функция в массиве должна вывести свой порядковый номер, но что то пошло не
 так и все кошки говорят, что их номер 10. Почему у всех кошек одинаковые номера? Исправьте код, чтобы он работал как
@@ -64,17 +60,15 @@ async function logArrayInfo(array) {
 const getSumTwoValue = (tree) => {
     const stack = [tree];
     let sum = 0;
-
     while (stack.length > 0) {
         const node = stack.pop();
         if (node.value % 2 === 0) {
             sum += node.value;
         }
-
         if (node.children.length > 0) {
             stack.push(...node.children);
         }
     }
-
     return sum;
-};```
+};
+```
