@@ -40,7 +40,8 @@ async function logArrayInfo(array) {
 так и все кошки говорят, что их номер 10. Почему у всех кошек одинаковые номера? Исправьте код, чтобы он работал как
 задумано.
 - Решить через замыкание: 
-``` function createCats() {
+```
+function createCats() {
     let cats = [];
     let i = 0;
     while (i < 10) {
@@ -53,9 +54,12 @@ async function logArrayInfo(array) {
         i++;
     }
     return cats;
-}```
+}
+```
+
 3. Необходимо найти сумму всех вершин, значение которых кратно 2
 - Решаем через стэк:
+
 ```
 const getSumTwoValue = (tree) => {
     const stack = [tree];
